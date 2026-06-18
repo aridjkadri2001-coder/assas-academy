@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>أكاديمية أساس التعليمية</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+    background:#0f0f0f;
+    color:white;
+}
+
+header{
+    background:black;
+    padding:15px;
+    text-align:center;
+    color:#ff4fa3;
+}
+
+.hero{
+    padding:40px;
+    text-align:center;
+    background:linear-gradient(45deg,#000,#ff4fa3);
+}
+
+form{
+    max-width:500px;
+    margin:30px auto;
+    padding:20px;
+}
+
+input,select,textarea{
+    width:100%;
+    padding:12px;
+    margin:8px 0;
+    border:none;
+    border-radius:8px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#ff4fa3;
+    border:none;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    border-radius:8px;
+}
+
+button:hover{
+    background:#ff2f8a;
+}
+
+.lang{
+    text-align:center;
+    margin:10px;
+}
+
+.lang button{
+    margin:3px;
+    padding:6px 10px;
+    border:none;
+    background:#ff4fa3;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>أكاديمية أساس التعليمية</h1>
+<p>دروس دعم حضورية وأونلاين</p>
+</header>
+
+<div class="lang">
+<button onclick="setLang('ar')">العربية</button>
+<button onclick="setLang('fr')">Français</button>
+<button onclick="setLang('en')">English</button>
+</div>
+
+<section class="hero">
+<h2 id="title">التسجيل في دروس الدعم</h2>
+<p id="desc">سجّل الآن وسيتم التواصل معك</p>
+</section>
+
+<!-- 📩 FORM EMAIL -->
+<form action="https://formsubmit.co/gigiaridj5@gmail.com" method="POST">
+
+<input type="hidden" name="_captcha" value="false">
+
+<input type="text" name="name" placeholder="الاسم" required>
+<input type="text" name="lastname" placeholder="اللقب" required>
+<input type="tel" name="phone" placeholder="رقم الهاتف" required>
+<input type="email" name="email" placeholder="البريد الإلكتروني" required>
+
+<select name="level" required>
+<option>ابتدائي</option>
+<option>متوسط</option>
+<option>ثانوي</option>
+<option>جامعي</option>
+</select>
+
+<select name="type" required>
+<option>حضوري</option>
+<option>أونلاين</option>
+</select>
+
+<select name="subject" required>
+<option>العربية</option>
+<option>الإنجليزية</option>
+<option>الفرنسية</option>
+<option>الرياضيات</option>
+<option>الإعلام الآلي</option>
+</select>
+
+<textarea name="message" placeholder="ملاحظات"></textarea>
+
+<button type="submit">إرسال الطلب</button>
+
+</form>
+
+<script>
+function setLang(lang){
+    if(lang === "ar"){
+        document.documentElement.lang = "ar";
+        document.documentElement.dir = "rtl";
+        document.getElementById("title").innerText = "التسجيل في دروس الدعم";
+        document.getElementById("desc").innerText = "سجّل الآن وسيتم التواصل معك";
+    }
+
+    if(lang === "fr"){
+        document.documentElement.lang = "fr";
+        document.documentElement.dir = "ltr";
+        document.getElementById("title").innerText = "Inscription aux cours";
+        document.getElementById("desc").innerText = "Inscrivez-vous maintenant";
+    }
+
+    if(lang === "en"){
+        document.documentElement.lang = "en";
+        document.documentElement.dir = "ltr";
+        document.getElementById("title").innerText = "Tutoring Registration";
+        document.getElementById("desc").innerText = "Register now and we will contact you";
+    }
+}
+</script>
+
+</body>
+</html>
